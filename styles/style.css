@@ -1,0 +1,199 @@
+body {}
+
+h1 {}
+
+html {}
+
+#titulo {}
+
+h1 {}
+
+.texto {}
+
+div p {}
+
+p {}
+
+p.texto {}
+
+p.otraClase {}
+
+div h2 {}
+
+div h2,
+h3 {}
+
+/* Propiedades del color */
+
+.color {}
+
+
+/* Propiedades de borde */
+
+.border {}
+
+/* Propiedades de medida */
+
+.medidasAbsolutas,
+.medidasRelativas_1,
+.medidasRelativas_2 {}
+
+.medidasAbsolutas {}
+
+.medidasRelativas_1 {}
+
+.medidasRelativas_2 {}
+
+.medidasRelativas_3 {}
+
+/* Propiedades de Background */
+
+#fondo {}
+
+/* Margen */
+
+.margen {}
+
+/* Box Model */
+
+.contenedor-boxModel {}
+
+.span1-boxModel,
+.span2-boxModel {}
+
+.span1-boxModel {}
+
+.span2-boxModel {}
+
+/* Texto */
+
+.textProp_1 {}
+
+.textProp_2 {}
+
+/* Propiedades de los links */
+
+#anchor {}
+
+a:link {}
+
+a:visited {}
+
+a:hover {}
+
+a:active {}
+
+/* Propiedades de las tablas */
+
+table {}
+
+th,
+td {}
+
+th {}
+
+tr:hover {}
+
+tr:nth-child() {}
+
+tr:nth-child() {}
+
+tr:nth-child() {}
+
+/* Propiedades de Display */
+
+.div_1 {}
+
+.div_2 {}
+
+.span_1 {}
+
+.span_2 {}
+
+.inline {}
+
+.block {}
+
+.span_3 {}
+
+.inline-block {}
+
+
+/* position */
+
+#position {}
+
+/* Propiedad float */
+
+.float {}
+
+.img-left {}
+
+.left {}
+
+.right {}
+
+#p-float {}
+
+#p-float::first-letter {}
+
+/* Propiedad center */
+
+.center {}
+
+#p-centrado::before {}
+
+#p-centrado::after {}
+
+/* Propiedades de listas */
+
+nav {}
+
+#h3Navbar {}
+
+ul li {}
+
+/* Animaciones */
+
+#animacion {}
+
+/* Transiciones */
+
+#suelo {}
+
+#macana {}
+
+#suelo:hover #macana {}
+
+
+/* GRID */
+
+#contenedor-grid {}
+
+#header {}
+
+#menu {}
+
+#submenu {}
+
+#main {}
+
+#image {}
+
+#extra {}
+
+#banner {}
+
+img {}
+
+#btnVolver {}
+
+#btnVolver:hover {}
+
+#btnVolver:active {}
+
+#btnVolver a {}
+
+#aBtn {}
+
+/* Responsive */
