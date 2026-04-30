@@ -2,14 +2,14 @@
 /* 
 body {
     color: green;
-} */ 
+} */
 
 /* html {
     font-size: 5px;
 } */
 
 #titulo {
-    color:green
+    color: green
 }
 
 h1 {
@@ -20,7 +20,9 @@ h1 {
     color: blue
 }
 
-p {color: crimson}
+p {
+    color: crimson
+}
 
 
 p.otraClase {
@@ -37,7 +39,7 @@ div p {
 }
 
 div h2 {
-    color:brown;
+    color: brown;
 }
 
 div h2,
@@ -86,8 +88,8 @@ h3 {
 }
 
 .medidasRelativas_2 {
-        font-size: 10px;
-        border: 2em tomato solid
+    font-size: 10px;
+    border: 2em tomato solid
 }
 
 .medidasRelativas_3 {
@@ -101,7 +103,7 @@ h3 {
     font-weight: bold;
     font-size: x-large;
     height: 400px;
-/* 
+    /* 
     background-color: rgba(255,0,0,.5);
 
     background-image: url(../img/logo_vsc.png);
@@ -115,7 +117,7 @@ h3 {
 /* Margen */
 
 .margen {
-    background-color:greenyellow;
+    background-color: greenyellow;
     margin: 15px 55px 50px 25px;
 
     padding: 30px 25px 20px 50px;
@@ -168,7 +170,7 @@ h3 {
     text-align: justify;
     text-decoration: underline;
     /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif */
-      font-family: "Whisper", cursive;
+    font-family: "Whisper", cursive;
     font-size: xx-large;
 
 
@@ -218,7 +220,7 @@ th {
 
 tr:hover {
     background-color: #666;
-    color:white;
+    color: white;
     cursor: pointer;
 
 }
@@ -336,46 +338,151 @@ tr:nth-child(3) {
 
 /* Propiedades de listas */
 
-nav {}
+nav {
+    /* border: 1px black solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+}
 
-#h3Navbar {}
+#h3Navbar {
+    color: violet;
+    font-size: 30px;
+}
 
-ul li {}
+ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
 
 /* Animaciones */
 
-#animacion {}
+#animacion {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    margin: 1% auto;
+    animation: redondeo 3s 2s infinite;
+}
+
+@keyframes redondeo {
+    0% {
+        border-radius: 0 0 0 0;
+        background-color: green;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        border-radius: 50% 0 0 0;
+        background-color: orange;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: aqua;
+        transform: rotate(90deg);
+    }
+
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background-color: yellow;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        border-radius: 50%;
+        background-color: hotpink;
+        transform: rotate(180deg);
+    }
+}
 
 /* Transiciones */
 
-#suelo {}
+#suelo {
+    border-bottom: 30px chocolate solid;
+    max-width: 600px;
+    overflow: hidden;
+}
 
-#macana {}
+#macana {
+    /* background-color: #555; */
+    height: 6rem;
+    width: 10rem;
+    margin-top: 3rem;
+    background-image: url(../img/macana.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
-#suelo:hover #macana {}
+#suelo:hover #macana {
+    margin-left: 100%;
+    transition: linear 3s;
+}
 
 
 /* GRID */
 
-#contenedor-grid {}
+#contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4rem 35% 1fr 1fr 8rem;
+    grid-template-areas:
+        "header menu menu menu"
+        "submenu submenu submenu submenu"
+        "main main main image"
+        "main main main extra"
+        "banner banner banner banner";
+}
 
-#header {}
+#header {
+    background-color: black;
+    grid-area: header;
+}
 
-#menu {}
+#menu {
+    background-color: crimson;
+    grid-area: menu
+}
 
-#submenu {}
+#submenu {
+    background-color: rgb(1, 141, 235);
+    grid-area: submenu
+}
 
-#main {}
+#main {
+    background-color: rgb(3,45,85);
+    grid-area: main;
+    overflow: scroll;
+}
 
-#image {}
+#image {
+    background-color: rgb(153,207,224);
+    grid-area: image
+}
 
-#extra {}
+#extra {
+    background-color: darkturquoise;
+    grid-area: extra
+}
 
-#banner {}
+#banner {
+    background-color: yellow;
+    grid-area: banner;
+}
 
-img {}
+img {
+    width: 100%;
+}
 
-#btnVolver {}
+#btnVolver {
+    display: block;
+    margin: 1rem auto;
+}
 
 #btnVolver:hover {}
 
@@ -386,3 +493,32 @@ img {}
 #aBtn {}
 
 /* Responsive */
+
+@media screen and (max-width: 760px) {
+    #contenedor-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "header"
+        "menu"
+        "submenu"
+        "main"
+        "image"
+        "extra"
+        "banner";
+    }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1023px) {
+        #contenedor-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 4em repeat(2, 3fr) repeat(2, 2fr);
+        grid-template-areas:
+        "header header header header"
+        "submenu submenu submenu submenu"
+        "menu main main main"
+        "menu banner banner banner"
+        "menu extra 0 image";
+    }
+
+}
